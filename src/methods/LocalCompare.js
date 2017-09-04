@@ -52,7 +52,7 @@ export default class LocalCompare extends BaseCompare {
     } else {
       log('first run - create reference file');
       await fs.outputFile(referencePath, base64Screenshot, 'base64');
-      return this.createResultReport(0, true, true);
+      return this.createResultReport(-1, false, false);
     }
   }
 
